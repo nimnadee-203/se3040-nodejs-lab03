@@ -14,3 +14,13 @@ async function myFunction() {
 }
 
 myFunction();
+  if (condition) {
+    resolve('Success!');
+  } else {
+    reject('Failure!');
+  }
+});
+
+myPromise
+  .then(result => console.log(result))
+  .catch(error => console.log(error));
