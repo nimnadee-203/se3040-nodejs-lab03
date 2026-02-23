@@ -11,6 +11,13 @@ https.get('https://jsonplaceholder.typicode.com/posts/1', (resp) => {
     console.log(JSON.parse(data));
   });
 
-}).on('error', (err) => {
-  console.log("Error: " + err.message);
-});
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write('Hello World!');
+  res.end();
+}).listen(8081);
+
+console.log("Server running on port 8081");
+
+const myModule = require('./my-module');
+console.log(myModule.myFunction());
