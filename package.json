@@ -1,0 +1,11 @@
+{
+  "name": "se3040-nodejs-lab03",
+  "version": "1.0.0",
+  "description": "NodeJS and Github flow lab (03)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nimnadee Imeshika",
+  "license": "ISC"
+}
