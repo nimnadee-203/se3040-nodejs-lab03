@@ -1,15 +1,16 @@
-const https = require('https');
+const fs = require('fs');
 
-https.get('https://jsonplaceholder.typicode.com/posts/1', (resp) => {
-  let data = '';
+fs.readFile('file.txt', 'utf8', function (err, data) {
+  if (err) throw err;
+  console.log(data);
+});
 
-  resp.on('data', (chunk) => {
-    data += chunk;
-  });
+fs.writeFile('file.txt', 'Hello World!', function (err) {
+  if (err) throw err;
+  console.log('File saved!');
+});
 
-  resp.on('end', () => {
-    console.log(JSON.parse(data));
-  });
+const http = require('http');
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
