@@ -1,4 +1,3 @@
-console.log("SE3040 Lab 03 - NodeJS Initialized");
 
 const fs = require('fs');
 
